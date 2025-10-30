@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array and Objects</h1>
+    <script>
+        let name = ["Nav", "Fah", "Asad"]
+        console.log(name)
+        console.log(name[0])
+        console.log(name[1])
+        console.log(name[2])
+
+        name.push("Bilal", "Ali")
+        console.log(name)
+
+        name.pop()
+        console.log(name)
+
+        // For adding and removing first name of array //
+        name.unshift("Root")
+        name.shift()
+        console.log(name)
+
+        // To know thw length of elements in a array //
+
+        console.log(name.length)
+
+        // To know the index of element in a array //
+
+        console.log(name.indexOf("Asad"))
+
+        // Arrow Function // 
+
+        const sayHello = () => {
+            console.log("Hi Hello")
+        }
+
+        sayHello()
+        // Passing one function to another function as a parameter through arrow function. Also called call back function. //
+
+        function sayFunc2(func) {
+            func()
+        }
+        sayFunc2(() => {
+            console.log("I am from arrow function")
+        })
+
+        let friendName = ["Bob T", "Tom", "Jim", "Mos T"]
+
+        friendName.map((nm) => {
+            if (nm.includes("T")) {
+                console.log(nm)
+            }
+
+        })
+
+        let ages = [12, 15, 30, 45, 50]
+        ages.map((ag) => {
+            if (ag > 18) {
+                console.log(ag)
+            }
+
+
+        })
+
+        // Return function //
+
+        let eligibleAges = ages.filter((ag) => {
+            if (ag > 18) {
+                return ag
+            }
+        })
+        console.log(eligibleAges)
+
+        // Object //
+
+        const person = {
+            name: "Naveed",
+            city: "Lahore",
+            age: 40,
+        }
+        console.log(person.age)
+        console.log(person.name)
+
+        const car = {
+            company: "Honda",
+            model: "city",
+            year: 2025,
+        }
+
+        // For replacing any charateristic of object //
+        car.model = "civic"
+        console.log(car)
+
+        // Similarly we can make array of different objects //
+
+        const carList = [
+            {
+                company: "honda",
+                year: 2024,
+            },
+            {
+                company: "kia",
+                year: 2025,
+            },
+         
+  
+        ]
+         console.log(carList)
+    </script>
+
+</body>
+
+</html>
